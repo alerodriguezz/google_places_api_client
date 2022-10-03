@@ -45,9 +45,14 @@ for i in place_id_list:
     x2 = r2.json()
     y2 = x2['result']
     print (y2['name'])
-    print (y2['formatted_address'])
-    print (y2['formatted_phone_number'])
-    
-"""
+    try:
+        print (y2['formatted_address'])
+    except Exception as e:
+        print('n/a')
+    try:
+        print (y2['formatted_phone_number'])
+    except Exception as e:
+        print('n/a')
+
 #if __name__=="__main__":
 """
